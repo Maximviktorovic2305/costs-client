@@ -29,7 +29,7 @@ function App() {
    return (
       <div className="flex flex-col h-[100vh]">
          <Header />
-         <Drawer />
+         {isLoggedIn && <Drawer />}
          {alert.alertText && <Alert props={alert} />}
          <main className="text-center overflow-y-auto">
             <Routes>
